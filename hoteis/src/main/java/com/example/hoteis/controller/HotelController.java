@@ -15,6 +15,7 @@ public class HotelController {
     @Autowired
     private HospedeRepository repository;
 
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping
     public void saveHospede(@RequestBody HospedeRequestDTO data){
         Hospede hospedeData = new Hospede(data);
